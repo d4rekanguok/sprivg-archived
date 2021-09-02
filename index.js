@@ -51,7 +51,7 @@ const main = async () => {
       res.writeHead(200, {
         'Content-Type': 'application/json',
       })
-      res.end(JSON.stringify(paths.map(item => getAssetPath(svgDir, item))))
+      res.end(JSON.stringify(paths.map(item => getAssetPath(svgDir, item)).sort()))
     })
     .listen(1234)
 }

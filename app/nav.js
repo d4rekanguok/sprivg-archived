@@ -15,7 +15,7 @@ export const Nav = () => {
 
   return html`
     <nav class="nav">
-      <button onClick=${handleGenerate}>Generate</button>
+      <button class="button" onClick=${handleGenerate}>Generate</button>
     </nav>
   `
 }

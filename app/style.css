@@ -1,0 +1,19 @@
+@import '/nav.css';
+@import '/app.css';
+@import '/block.css';
+
+:root {
+  --bg: linen;
+  --bg-active: white;
+  --color-1: chocolate;
+  --color-2: rosybrown;
+  
+  --br-1: 4px;
+  --br-2: 6px;
+  --br-3: 12px;
+}
+
+html {
+  background-color: var(--bg);
+  font-family: sans-serif;
+}

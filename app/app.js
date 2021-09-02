@@ -1,5 +1,6 @@
 import { render, html, useState, useEffect } from './common.js'
 import { Nav } from './nav.js'
+import { Block } from './block.js'
 import { useStore } from './store.js'
 
 const App = () => {
@@ -11,8 +12,8 @@ const App = () => {
       try {
         const res = await fetch('/api/svg')
         const data = await res.json()
-        const first20 = data.slice(0, 20)
-        setData(first20)
+        const first100 = data.slice(0, 100)
+        setData(first100)
       } catch(err) {
         // do nothing
       }
@@ -25,14 +26,15 @@ const App = () => {
     <main>
       <${Nav} />
       <section>
+        <ul class="list">
         ${data.map(item => {
           const isSelected = selected.indexOf(item) >= 0
           return html`
-            <button onClick=${() => store.toggle(item)} style=${{ border: isSelected ? '1px solid blue' : 'none' }}>
-              <img key=${item} src=${item} />
-            </button>
-          `
+            <li key=${item}>
+              <${Block} item=${item} isSelected=${isSelected} />
+            </li>`
         })}
+        </ul>
       </section>
     </main>
   `

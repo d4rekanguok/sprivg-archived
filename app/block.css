@@ -1,0 +1,24 @@
+.block {
+  position: relative;
+}
+.block-button {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: var(--br-3);
+  border: 2px solid transparent;
+  padding: 0.5rem;
+  margin: 0;
+  transition: border-color .15s ease;
+}
+.block-button[data-selected="true"] {
+  background-color: var(--bg-active);
+  border-color: var(--color-1);
+}
+.block-button:hover {
+  border-color: var(--color-2);
+}
+.block-image {
+  width: 100%;
+}
