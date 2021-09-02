@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "name": "sprivg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "globby": "^12.0.2",
+    "polka": "^0.5.2",
+    "sirv": "^1.0.17",
+    "svg-sprite": "^1.5.2"
+  }
+}
