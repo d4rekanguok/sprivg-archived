@@ -81,7 +81,8 @@ web_modules/
 
 # Next.js build output
 .next
-out
+out/*
+!out/.gitkeep
 
 # Nuxt.js build / generate output
 .nuxt
